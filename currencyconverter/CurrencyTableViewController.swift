@@ -13,7 +13,8 @@ class CurrencyTableViewController: UITableViewController
 
     var val:String = "USD"
     //@IBOutlet weak var usernamelabel: UILabel!
-    let CountryNames = ["USD" , "INR" , "EURO" , "CAD"]
+    let CountryNames = ["USD" , "INR" , "EUR" , "CAD"]
+    let image: [UIImage] = [#imageLiteral(resourceName: "united-states") , #imageLiteral(resourceName: "india") , #imageLiteral(resourceName: "European-Union-Flag"), #imageLiteral(resourceName: "canada")]
     
     override func viewDidLoad()
     {
@@ -36,8 +37,8 @@ class CurrencyTableViewController: UITableViewController
         {
         let cell = tableView.dequeueReusableCell(
         withIdentifier: "countryList",for: indexPath)
-            //cell.textLabel?.text = "hgjghjghj"
-            cell.textLabel?.text = CountryNames[indexPath.row]
+            
+            cell.imageView?.image = image[indexPath.row]
             cell.textLabel?.text = CountryNames[indexPath.row]
             return cell
         }

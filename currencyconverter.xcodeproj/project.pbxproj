@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B30B30B237DC2F4008DCFF8 /* DefaultRateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B30B30A237DC2F4008DCFF8 /* DefaultRateTableViewController.swift */; };
 		9BB9F91A2375E59500E9266F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB9F9192375E59500E9266F /* AppDelegate.swift */; };
 		9BB9F91C2375E59500E9266F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB9F91B2375E59500E9266F /* SceneDelegate.swift */; };
 		9BB9F91E2375E59500E9266F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB9F91D2375E59500E9266F /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B30B30A237DC2F4008DCFF8 /* DefaultRateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRateTableViewController.swift; sourceTree = "<group>"; };
 		9BB9F9162375E59500E9266F /* currencyconverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = currencyconverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB9F9192375E59500E9266F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BB9F91B2375E59500E9266F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9BB9F9242375E59B00E9266F /* LaunchScreen.storyboard */,
 				9BB9F9272375E59B00E9266F /* Info.plist */,
 				9BB9F92F2375FB7D00E9266F /* CurrencyTableViewController.swift */,
+				9B30B30A237DC2F4008DCFF8 /* DefaultRateTableViewController.swift */,
 			);
 			path = currencyconverter;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				9BB9F91E2375E59500E9266F /* ViewController.swift in Sources */,
 				9BB9F91A2375E59500E9266F /* AppDelegate.swift in Sources */,
+				9B30B30B237DC2F4008DCFF8 /* DefaultRateTableViewController.swift in Sources */,
 				9BB9F91C2375E59500E9266F /* SceneDelegate.swift in Sources */,
 				9BB9F9302375FB7D00E9266F /* CurrencyTableViewController.swift in Sources */,
 			);
