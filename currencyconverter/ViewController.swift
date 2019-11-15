@@ -19,7 +19,7 @@ class ViewController: UIViewController
     
     @IBOutlet weak var defaultRate: UILabel!
     var check = true
-
+     var resetdefault = ""
     var value:String! = "USD"
     var value1:String! = "INR"
     let usdinr = 71.58
@@ -41,7 +41,21 @@ class ViewController: UIViewController
     
     @IBAction func convertButton(_ sender: Any) {
         
+        
+        
+        
+        
         var amt:Double! = Double(enterAmount.text!)
+        
+        
+        
+        if resetdefault == ""
+        {
+            
+        }else{
+            resetNewDefault()
+            return
+        }
        
        if amt == nil{
                      showAlert()
@@ -218,9 +232,10 @@ class ViewController: UIViewController
     }
   
          func defValue(){
+         
    switch fromlabel.text{
 
-             
+            
                   case "USD":
                      switch tolabel.text{
 
@@ -346,10 +361,153 @@ class ViewController: UIViewController
                       break
 
               }
-
+            
               
 
          }
+    
+    
+    func resetNewDefault(){
+        
+              var amt:Double! = Double(enterAmount.text!)
+               
+         switch fromlabel.text{
+
+                  
+                        case "USD":
+                           switch tolabel.text{
+
+                                case "USD":
+                                    amt = amt * Double(resetdefault)!
+                                    result.text = String(amt)
+                                    break
+
+                                case "INR":
+                                    print(resetdefault)
+                                    amt = amt * Double(resetdefault)!
+                                    print(amt)
+                                    result.text = String(amt)
+                                    break
+
+                                case "CAD":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                case "EUR":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                default:
+                                    break
+
+                            }
+
+                            break
+
+                        case "INR":
+                           switch tolabel.text{
+
+                                case "USD":
+                                    amt = amt * Double(resetdefault)!
+                                    result.text = String(amt)
+                                    break
+
+                                case "INR":
+
+                                    amt = amt * Double(resetdefault)!
+                                  result.text = String(amt)
+                                    break
+
+                                case "CAD":
+                                    amt = amt * Double(resetdefault)!
+                                    result.text = String(amt)
+                                    break
+
+                                case "EUR":
+                                    amt = amt * Double(resetdefault)!
+                                    result.text = String(amt)
+                                    break
+
+                                default:
+                                    break
+
+                            }
+
+                            break
+
+                        case "CAD":
+
+                            switch tolabel.text{
+                                case "USD":
+                                    amt = amt * Double(resetdefault)!
+                                    result.text = String(amt)
+                                    break
+                               
+                                   case "INR":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                case "CAD":
+                                    amt = amt * Double(resetdefault)!
+                                   result.text = String(amt)
+                                    break
+
+                                case "EUR":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                default:
+                                    break
+
+                            }
+
+                            break
+
+                        case "EUR":
+
+                            switch tolabel.text{
+                                case "USD":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                case "INR":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                case "CAD":
+                                    amt = amt * Double(resetdefault)!
+                                    result.text = String(amt)
+                                    break
+
+                                case "EUR":
+                                    amt = amt * Double(resetdefault)!
+                                     result.text = String(amt)
+                                    break
+
+                                default:
+                                    break
+
+                            }
+
+                            break
+
+                        default:
+                            break
+
+                    }
+                  
+                    
+
+               
+    }
+    
+    
     
     @IBAction func changeBtn(_ sender: Any)
    
@@ -390,6 +548,11 @@ class ViewController: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         defValue()
+        if resetdefault == ""{
+            
+        }else{
+            defaultRate.text = resetdefault
+        }
         
         fromlabel.text = value
         

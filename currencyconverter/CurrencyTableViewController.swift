@@ -26,7 +26,7 @@ class CurrencyTableViewController: UITableViewController
         return 1
     }
 
-//     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         {
             return CountryNames.count

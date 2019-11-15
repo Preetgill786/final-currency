@@ -12,28 +12,36 @@ protocol DefaultChangeControllerDelegate {
     
     func changeRateViewController(_ controller: DefaultRateTableViewController, didFinishAdding changedRate: String)
 }
-class DefaultRateTableViewController: UITableViewController {
+class DefaultRateTableViewController: UIViewController {
 
-   
+   var defff = ""
        
-    @IBOutlet weak var rateText: UILabel!
+    @IBOutlet weak var rateText1: UITextField!
+   
     var delegateDF: DefaultChangeControllerDelegate?
        
        
        
        @IBAction func ChangedPress(_ sender: Any) {
-           if(rateText.text == ""){
+           if(rateText1.text == ""){
                
                let alert = UIAlertController(title: "Field is Empty", message: "Please Enter Amount", preferredStyle: UIAlertController.Style.alert)
                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                self.present(alert, animated: true, completion: nil)
                return
            }else{
-               
-              delegateDF?.changeRateViewController(self, didFinishAdding: rateText.text!)
-           }}
+            defff = rateText1.text!
+               print(defff)
+            let a = self.navigationController!.viewControllers[0] as! ViewController
+            
+             a.resetdefault = defff
+            self.navigationController!.popToRootViewController(animated: true)
+             
+        }
+     
+    }
        
-       
+   
     
        var itemToEdit: String?
        
@@ -41,7 +49,7 @@ class DefaultRateTableViewController: UITableViewController {
          super.viewDidLoad()
          if let itemToEdit = itemToEdit {
            title = "Edit Item"
-           rateText.text = itemToEdit
+           rateText1.text = itemToEdit
          
          }
        }
