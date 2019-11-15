@@ -222,7 +222,7 @@
                                 <rect key="frame" x="60" y="116" width="255" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.99783483504093262" green="0.58908020925751781" blue="0.82845030610847736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
