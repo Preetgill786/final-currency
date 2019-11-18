@@ -66,7 +66,7 @@ class ViewController: UIViewController
         
         // using switch on the fromLabel
         switch fromlabel.text{
-       
+            
         case "USD":
             //using inner switch on tolabel
             switch tolabel.text{
@@ -376,7 +376,7 @@ class ViewController: UIViewController
         var amt:Double! = Double(enterAmount.text!)
         
         switch fromlabel.text{
-         
+            
         case "USD":
             switch tolabel.text{
                 
